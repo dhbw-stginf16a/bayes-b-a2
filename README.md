@@ -19,3 +19,11 @@ Entwickeln  Sie eine  Software, welche bei  Eingabe einer Testdatei, welche
 Angaben zu oben genannten Referenzdaten (z.B. alte Fallakten incl. Tarif)
 enthält  (ggf. unvollständig), entscheidet, welcher Tarif für den jeweiligen
 Fall empfohlen werden soll. 
+
+# Running
+Build and run docker container with:
+
+```
+docker build -t jupyter-bayes .
+docker run -p 8888:8888 -v (pwd):/home/jovyan/work bayes
+```
