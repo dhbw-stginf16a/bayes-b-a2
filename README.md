@@ -20,6 +20,19 @@ Angaben zu oben genannten Referenzdaten (z.B. alte Fallakten incl. Tarif)
 enthält  (ggf. unvollständig), entscheidet, welcher Tarif für den jeweiligen
 Fall empfohlen werden soll. 
 
+## Fachliche Bearbeitung (25 Punkte)
+- Lösungsqualität
+- Umfang der Funktionalität
+- Konzept
+- Korrekte Verwendung von Kernfunktionen
+- Anpassung an die Aufgabenstellung
+- Nutzung der erworbenen Kenntnisse aus der Vorlesung
+
+## Dokumentation (15 Punkte)
+- Begründung von Entwurf und Umsetzung
+- Test und Ergebnisbewertung
+- Dokumentation des Programms und Codestruktur/Codequalität
+
 # Running
 Build and run docker container with:
 
