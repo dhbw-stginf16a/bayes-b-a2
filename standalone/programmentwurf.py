@@ -60,9 +60,19 @@ def main():
        validation_data['Familieneinkommen'] = validation_data['Familieneinkommen'].apply(normalizeIncome)
     except:       
         aboard("Could not read file and/or prepare data")
-    print("Predicting Tarif:\n\n")
-    print(model_recover.predict(validation_data))
+    print("Predicting Tarif & appending to new 'prediction tarif' column:\n\n")
+    validation_data["Predicted Tarif"] = model_recover.predict(validation_data)
+    print(validation_data)
 
+    
+    print("\n\nPrinting out CPDs to cpd_exp.txt")
+    cpds = model_recover.get_cpds()
+
+    # Create and/or cleanup file
+    open("cpd_exp.txt", "w").write('')
+
+    for cpd in cpds:
+        open("cpd_exp.txt", "a").write(cpd._make_table_str())
  
 if __name__ == "__main__":
 	main()
