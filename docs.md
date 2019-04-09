@@ -24,6 +24,18 @@
 ## Network
 ![](content/generated_network.jpeg)
 
+Auto Structured Network:
+![](omrkv_auto_real_values.png)
+Used Algorithm:
+![](omrkv_interface_auto_settings.png)
+
+
+First attempt, self-structured network:
+![](omrkv_first_attempt_overview.png)
+
+
+
+
 ## Features
 
 ### Jupyter Notebook
