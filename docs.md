@@ -21,6 +21,9 @@
 - Auswahl von Knoten (filtern und vielleicht neue)
 - Diagnostische, Kausale, Interkausale, Gemischte Inferenz
 
+## Network
+![](content/generated_network.jpeg)
+
 ## Features
 
 ### Jupyter Notebook
