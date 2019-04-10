@@ -1,3 +1,4 @@
+# Bayes Network
 Ihre Aufgabe in diesem Themenfeld: `Bayes_B`
 Ihr Datensatz: A2
 
@@ -20,20 +21,11 @@ Angaben zu oben genannten Referenzdaten (z.B. alte Fallakten incl. Tarif)
 enthält  (ggf. unvollständig), entscheidet, welcher Tarif für den jeweiligen
 Fall empfohlen werden soll. 
 
-## Fachliche Bearbeitung (25 Punkte)
-- Lösungsqualität
-- Umfang der Funktionalität
-- Konzept
-- Korrekte Verwendung von Kernfunktionen
-- Anpassung an die Aufgabenstellung
-- Nutzung der erworbenen Kenntnisse aus der Vorlesung
+## Documentation
 
-## Dokumentation (15 Punkte)
-- Begründung von Entwurf und Umsetzung
-- Test und Ergebnisbewertung
-- Dokumentation des Programms und Codestruktur/Codequalität
+See `docs.md`
 
-# Running Jupyter Notebook
+## Running Jupyter Notebook
 Build and run docker container with:
 
 ```
@@ -41,7 +33,7 @@ docker build -t jupyter-bayes .
 docker run -p 8888:8888 -v (pwd):/home/jovyan/work bayes
 ```
 
-# Programmentwurf - Standalone
+## Programmentwurf - Standalone
 Everything is in the `standalone/` directory.
 In order to run the `programmentwurf.py,` install all requirements with;
 
