@@ -2,6 +2,8 @@
 Ihre Aufgabe in diesem Themenfeld: `Bayes_B`
 Ihr Datensatz: A2
 
+Daniel Schaefer und David Marchi
+
 Es soll ein Versicherungstarif ausgewählt werden. Zur Wahl steht nur eine
 begrenzte Zahl an Tarifen. Als mögliche Informationen können die Angaben zu
 Altersgruppe,  Geschlecht,  Familienstand,  Kinderzahl,  Alter  des  ältesten
