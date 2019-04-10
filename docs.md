@@ -1,11 +1,3 @@
-## Dokumentation
-- Netzwerkvisualisierung
-  - Eigener Netzwerkentwurf
-  - Netzwerkentwurf mit OpenMarkov
-- Clustering und Diagramm von continuous data
-- Auswahl von Knoten (filtern und vielleicht neue)
-- Diagnostische, Kausale, Interkausale, Gemischte Inferenz
-
 ## Vorgehensweise
 
 - Analyse
@@ -67,20 +59,27 @@ Die Performance kann beeinflussen, indem man auf verschiende Weisen trainiert.
 Man kann
 - die verschiedenen Netzwerke trainieren
 - das Verhältnis vom Split zwischen Trainingsdaten und Testdaten (0.25, 0.5, 0.75)
-- k-fold cross validation (wurde nicht durchgeführt)
+- k-fold cross validation benutzen (wurde nicht durchgeführt)
+
+Testgenauigkeit:
 
 |                     | 25% Training | 50% Training | 75% Training |
 | ------------------- | ------------ | ------------ | ------------ |
-| Eigenes Netzwerk    |    TODO      |  TODO        | TODO         |
-| OpenMarkov Netzwerk |    TODO      |  TODO        | TODO         |
-| Simples Netzwerk    |    TODO      |  TODO        | TODO         |
+| Eigenes Netzwerk    |    0.28      |  0.44        | 0.42         |
+| Simples Netzwerk    |    0.30      |  0.37        | 0.36         |
+| OpenMarkov Netzwerk |    0.80      |  0.87        | 0.92         |
+
+Man sieht, dass unsere eigenen Netzwerke sehr schlecht performen.
+Das Netzwerklayout, was mit OpenMarkov auf die Daten erstellt worden ist, liefert hingegen unglaubliche Ergebnisse.
+Die vorliegenden Daten entsprechen also wahrscheinlich nicht unseren Vorstellung der Abhängigkeiten - sonst hätte man mindestens 50% erreichen sollen.
+50% ist die magische Grenze, denn so viel Genauigkeit würde man bei zwei Möglichkeiten und reinem Raten erreichen.
 
 ## Standalone Programm
 - Import Network
 - Input CSV -> Output Classification
 - Export CPT
 
-Netzwerk wurde mit anderen Notebooks trainiert, die das Netzwerk serialisiert und in die Datei `bayesian_modle.p` geschrieben haben.
+Netzwerk wurde mit anderen Notebooks trainiert, die das Netzwerk serialisiert und in die Datei `bayesian_model.p` geschrieben haben.
 
 Das Programm lädt dieses Netzwerk und liest die Dateien ein. Diese kontinuierlichen Variablen werden dann genauso wie beim Training in Kategorien eingeteilt, falls sie existieren.
 
@@ -92,4 +91,4 @@ Zusätzlich werden die CPTs noch in die Datei `cpd_exp.txt` geschrieben.
 - Andere Netzwerke
   - Mit weniger nodes
   - Mit mehr Zwischen-nodes (also welche ohne Beispielwerte)
-- k-fold cross validation)
+- k-fold cross validation
