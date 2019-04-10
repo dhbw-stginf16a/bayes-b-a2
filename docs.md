@@ -1,19 +1,3 @@
-# Forderung
-## Fachliche Bearbeitung (25 Punkte)
-- Lösungsqualität
-- Umfang der Funktionalität
-- Konzept
-- Korrekte Verwendung von Kernfunktionen
-- Anpassung an die Aufgabenstellung
-- Nutzung der erworbenen Kenntnisse aus der Vorlesung
-
-## Dokumentation (15 Punkte)
-- Begründung von Entwurf und Umsetzung
-- Test und Ergebnisbewertung
-- Dokumentation des Programms und Codestruktur/Codequalität
-
----
-
 ## Dokumentation
 - Netzwerkvisualisierung
   - Eigener Netzwerkentwurf
