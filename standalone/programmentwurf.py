@@ -38,33 +38,44 @@ def normalizeIncome(income):
     else:
         return ">100000"
 
-def aboard(message):
+def abort(message):
     print(message)
     sys.exit(0)
 
 def main():
-    
+
     print("Searching for bayesan_model.p\n Loading Bayesan Model\n\n")
     try:
         model_recover = pickle.load(open("bayesian_model.p", "rb"))
     except:
-        aboard("Error loading model. Aborting.")
-    
+        abort("Error loading model. Aborting.")
+
     print("Success\n\nOpening valuation data...\n")
     try:
-       validation_data = pd.read_csv('versicherung_validation.csv', delimiter=';')
-    
-       validation_data = validation_data.drop(columns=["Tarif"])
-       validation_data['aeltestesKind'] = validation_data['aeltestesKind'].apply(normalizeKindAge)
-       validation_data['juengstesKind'] = validation_data['juengstesKind'].apply(normalizeKindAge)
-       validation_data['Familieneinkommen'] = validation_data['Familieneinkommen'].apply(normalizeIncome)
-    except:       
-        aboard("Could not read file and/or prepare data")
+        validation_data = pd.read_csv('versicherung_validation.csv', delimiter=';')
+
+        # Remove the column that we want to predict
+        if "Tarif" in validation_data:
+            validation_data = validation_data.drop(columns=["Tarif"])
+
+        # Cluster continuous data
+        if 'aeltestesKind' in validation_data:
+            validation_data['aeltestesKind'] = validation_data['aeltestesKind'].apply(normalizeKindAge)
+
+        if 'juengstesKind' in validation_data:
+            validation_data['juengstesKind'] = validation_data['juengstesKind'].apply(normalizeKindAge)
+
+        if 'Familieneinkommen' in validation_data:
+            validation_data['Familieneinkommen'] = validation_data['Familieneinkommen'].apply(normalizeIncome)
+    except:
+        abort("Could not read file and/or prepare data")
+
     print("Predicting Tarif & appending to new 'prediction tarif' column:\n\n")
-    validation_data["Predicted Tarif"] = model_recover.predict(validation_data)
+    prediction = model_recover.predict(validation_data)
+    validation_data["Predicted Tarif"] = prediction["Tarif"]
     print(validation_data)
 
-    
+
     print("\n\nPrinting out CPDs to cpd_exp.txt")
     cpds = model_recover.get_cpds()
 
@@ -73,6 +84,6 @@ def main():
 
     for cpd in cpds:
         open("cpd_exp.txt", "a").write(cpd._make_table_str())
- 
+
 if __name__ == "__main__":
-	main()
+    main()

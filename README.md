@@ -33,7 +33,7 @@ Fall empfohlen werden soll.
 - Test und Ergebnisbewertung
 - Dokumentation des Programms und Codestruktur/Codequalität
 
-# Running
+# Running Jupyter Notebook
 Build and run docker container with:
 
 ```
@@ -42,17 +42,17 @@ docker run -p 8888:8888 -v (pwd):/home/jovyan/work bayes
 ```
 
 # Programmentwurf - Standalone
-In order to run the programmentwurf.py, install all requirements with;
+Everything is in the `standalone/` directory.
+In order to run the `programmentwurf.py,` install all requirements with;
 
 ```
 pip install -r requirements.txt
 ```
-or run though jupyter notebook docker container;
+or run though Jupyter notebook docker container:
 
 ```
-!pyhton programmentwurf.py
+!python programmentwurf.py
 ```
 
-Make sure the programmentwurf.py and bayesan network model file bayesian_model.p are in the same directory.
-Modify and/or overwrite the existing versicherung_validation.csv and run the programm to get predictions.
-All columns have to exsist, although do not have to be filled with values.
+Make sure the `programmentwurf`.py and bayesian network model file `bayesian_model`.p are in the same directory.
+Modify and/or overwrite the existing `versicherung_validation`.csv and run the programm to get predictions.
