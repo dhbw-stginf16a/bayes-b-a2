@@ -47,6 +47,8 @@ Zuerst haben wir das Netzwerk manuell erstellt. Dabei haben wir uns überlegt, w
 Das Problem hierbei ist aber, dass wir diese Zusammenhänge nur auf unseren eigenen Erfahrungen und Meinung basieren, ohne dabei auf den konkreten Datensatz zu schauen.
 
 ![Erster Versuch, eigenes Netzwerk](content/omrkv_first_attempt_overview.png)
+![Einfacher Versuch](content/omrkv_simple_network_overview.png)
+
 
 Um ein Netzwerk basierend auf den Beispieldaten aufzubauen haben wir benutzt.
 
