@@ -47,15 +47,21 @@ Zuerst haben wir das Netzwerk manuell erstellt. Dabei haben wir uns überlegt, w
 Das Problem hierbei ist aber, dass wir diese Zusammenhänge nur auf unseren eigenen Erfahrungen und Meinung basieren, ohne dabei auf den konkreten Datensatz zu schauen.
 
 ![Erster Versuch, eigenes Netzwerk](content/omrkv_first_attempt_overview.png)
+
+
+Als Alternative noch ein Netzwerk mit weniger Nodes und Edges um einen Vergleich ziehen zu können:
+
 ![Einfacher Versuch](content/omrkv_simple_network_overview.png)
 
 
-Um ein Netzwerk basierend auf den Beispieldaten aufzubauen haben wir benutzt.
+Um ein Netzwerk basierend auf den Beispieldaten aufzubauen haben wir benutzt:
 
 ![Used Algorithm](content/omrkv_interface_auto_settings.png)
 
+Was ein Auto-Generiertes Netzwerk ausgibt. (Dabei zu beachten; die Kategorieen wurden in Zahlen umgewandelt, deshalb nur Zahlenwerte zu sehen)
 ![](content/generated_network.jpeg)
 
+Hier noch ein Durchlauf mit den originalen Kategorienamen und der Kategorisierung auf freie Werte (Familieneikommen etc.). 
 ![Auto Structured Network](content/omrkv_auto_real_values.png)
 
 ## Implementierung
