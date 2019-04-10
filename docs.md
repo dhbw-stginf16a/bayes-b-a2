@@ -57,7 +57,7 @@ Um ein Netzwerk basierend auf den Beispieldaten aufzubauen haben wir benutzt.
 ![Auto Structured Network](content/omrkv_auto_real_values.png)
 
 ## Implementierung
-Mit der Python library `pgmpy` ist es ziemlich einfach.
+Mit der Python library `pgmpy` ist möglich Bayes Netzwerke nachzubauen.
 Zuerst baut man sich das Netzwerk auf. Dazu übergibt man einfach eine Liste mit den gewünschten Kanten. Die Knoten können daraus abgeleitet werden.
 Man importiert das CSV in ein `pandas` `DataFrame` und clustert Werte, die es noch nicht sind.
 Dann splittet man die Daten in Test und Trainingsdaten auf. Denn wenn man mit denselben Daten teste, mit denen man trainiert ist das Testergebnis deutlich höher. 75% zum trainieren erscheint uns ein guter Wert. So hat man sehr viele Trainingsdaten, aber immer noch 50 Fälle zum Testen.
