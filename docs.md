@@ -69,7 +69,7 @@ Man kann
 - k-fold cross validation (wurde nicht durchgeführt)
 
 |                     | 25% Training | 50% Training | 75% Training |
-| ------------------- + ------------ + ------------ + ------------ |
+| ------------------- | ------------ | ------------ | ------------ |
 | Eigenes Netzwerk    |    TODO      |  TODO        | TODO         |
 | OpenMarkov Netzwerk |    TODO      |  TODO        | TODO         |
 | Simples Netzwerk    |    TODO      |  TODO        | TODO         |
