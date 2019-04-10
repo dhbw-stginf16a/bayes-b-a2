@@ -36,7 +36,7 @@ Also haben wir uns zu erst einmal die Daten angesehen.
 
 Interessant ist, dass 87.5% der Beispiele dem Tarif B zugeordnet werden und wir somit nur 25 Beispiele für A haben. Es ist also fraglich, wie gut das Netzwerk dann A vorhersagen kann oder von vorne rein schon darauf ausgelegt ist praktisch alles auf B zu klassifizieren.
 
-Außerdem gibt es bei dem Familieneinkommen eine Lücke zwischen 40k und 60k ohne Beispiele - über diesen Bereich kann man also guten Vorhersagen machen.
+Außerdem gibt es bei dem Familieneinkommen eine Lücke zwischen 40k und 60k ohne Beispiele - über diesen Bereich kann man also keine guten Vorhersagen machen.
 
 Was man beim Bayes Netzwerk (zumindest wie wir es gemacht haben) braucht, sind eindeutige Kategorien für die verschiedenen Variablen. Deswegen muss man `aeltestesKind`, `juengstesKind` und `Familieneinkommen` in Buckets einordnen, genau so, wie das bei `Altersgruppe` von vorneherein ist. Dazu haben wir bei dem Alter erstmal `n.a.` durch 0 ersetzt und ein Histogramm erstellt. Man sieht, dass 0 (kein Kind - um ein Histogramm zu erstellen ist 0 sinnvoll, aber das Bayes Netz kennt keine Orderung zwischen den Werten mehr, also schadet es nicht) mit Abstand der häufigste Wert ist. Die restlichen Werte scheinen ein Muster aufzuweisen, was wir uns auch schon ohne Diagramm vorher überlegt hatten: 1-10 (Kind), 11-18 (Jugendlicher), 19-25, >25
 Beim Familieneinkommen ergeben 10 Tausender Schritte Sinn - das Diagramm ist auch ungefährt so geclustert. (Nur dass zwischen 40k und 60k nichts ist.
